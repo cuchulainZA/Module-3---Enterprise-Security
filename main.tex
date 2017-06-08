@@ -1,0 +1,87 @@
+
+\documentclass[12pt, british]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\pagestyle{headings}
+
+\usepackage{setspace}                   % used for line spacing
+\renewcommand{\baselinestretch}{1.5} 
+
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+%% Add any other packages you may need
+\usepackage{url}
+\usepackage{graphicx}                                           % Graphics library
+\usepackage{tikz}                                               % Latex drawing package
+\usetikzlibrary{calc,positioning,shapes,decorations.pathreplacing}  % tikz libraries
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+\usepackage{authordate1-4}                                      % for authordate ref style only
+\usepackage{natbib}
+\usepackage{comment}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% Glossary section %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[toc]{glossaries}  
+\setacronymstyle{long-short}
+\include{glossary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% Glossary section %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\makeatother
+\usepackage{babel}
+
+\begin{document}
+\selectlanguage{british}%
+
+\title{Course Work MSc 2017\\
+Module 3\\
+Digital Forensics and Incident Response}
+
+
+\author{Ivan Burke\\
+G17B8559}
+
+\maketitle
+\noindent \begin{center}
+\rule[0.5ex]{1\linewidth}{1pt}
+\par\end{center}
+
+\def\thesection{\Alph{section}}
+%\renewcommand\thesection{\Alpha{section}}
+%\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% All sections are in a separate file in Sections folder %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{Sections/Section_A}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% This assessment offers some choice. You are required to choose %%%%%%%%%%
+%%% to submit responses to two of the following tasks. These are %%%%%%%%%%%%
+%%% all equally weighted %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{Sections/Section_B}
+\include{Sections/Section_C}
+\include{Sections/Section_D}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Section E %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% This component will be used to score correct referencing %%%%%%%%%%%%%%%%
+%%% (pay particular attention to electronic resources) and %%%%%%%%%%%%%%%%%%
+%%% academic writing.%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\bibliographystyle{ruauthordate}   % also uncomment the usepackage{authordate1-4} above
+  
+\bibliography{ref} 
+
+\end{document}
